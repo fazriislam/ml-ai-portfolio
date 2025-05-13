@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name | Data Scientist Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v8/font/simple-icons.min.css" />
+</head>
+
+<body class="bg-gradient-to-b from-slate-900 to-slate-800 text-slate-100">
+
+    <!-- Navbar -->
+    <nav class="bg-slate-950/80 backdrop-blur-md fixed top-1 w-full z-20 shadow-md" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div
+                    class="text-2xl font-bold uppercase tracking-widest text-indigo-700 border border-indigo-700 px-3 py-1 rounded-lg shadow-inner bg-slate-950/30 backdrop-blur-md">
+                    FI
+                </div>
+
+                <div class="hidden md:flex space-x-6 text-slate-200">
+                    <a href="#about" class="hover:text-teal-400 py-2">About</a>
+                    <a href="#education" class="hover:text-teal-400 py-2">Education</a>
+                    <a href="#experience" class="hover:text-teal-400 py-2">Experience</a>
+                    <a href="#projects" class="hover:text-teal-400 py-2">Projects</a>
+                    <a href="#publications" class="hover:text-teal-400 py-2">Publications</a>
+                    <a href="#blog" class="hover:text-teal-400 py-2">Blog</a>
+                    <a href="#contact" class="hover:text-teal-400 py-2">Contact</a>
+                    <a href="fazri-islam-resume.pdf" download
+                        class="block bg-indigo-500 px-4 py-2 rounded text-white text-center hover:bg-indigo-400">
+                        Resume
+                    </a>
+                </div>
+
+                <!-- Mobile -->
+                <div class="md:hidden">
+                    <button @click="open = !open" class="text-white">
+                        <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="open" x-transition class="md:hidden bg-slate-900 px-4 py-4 space-y-3">
+            <a href="#about" @click="open = false" class="block hover:text-teal-400">About</a>
+
+            <a href="#education" @click="open = false" class="block hover:text-teal-400">Education</a>
+            <a href="#experience" @click="open = false" class="block hover:text-teal-400">Experience</a>
+            <a href="#projects" @click="open = false" class="block hover:text-teal-400">Projects</a>
+            <a href="#publications" @click="open = false" class="block hover:text-teal-400">Publications</a>
+            <a href="#blog" @click="open = false" class="block hover:text-teal-400">Blog</a>
+            <a href="#contact" @click="open = false" class="block hover:text-teal-400">Contact</a>
+            <a href="fazri-islam-resume.pdf" download
+                class="block bg-indigo-500 px-4 py-2 rounded text-white text-center hover:bg-indigo-400">
+                Resume
+            </a>
+        </div>
+    </nav>
+
+    <main class="pt-24 space-y-36 max-w-5xl mx-auto px-4">
+
+        <!-- About -->
+        <section id="about" class="text-center">
+            <img src="C:\Users\Lenovo\Desktop\portfolio\440413651_906338157845599_4483997011243396391_n.jpg"
+                alt="My Photo" class="mx-auto w-36 h-36 rounded-full border-4 border-indigo-500 shadow-lg mb-4" />
+            <h2 class="text-4xl font-bold text-indigo-400 mb-2">Hello, I'm Fazri Islam</h2>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+                I'm a <span class="text-teal-400">Computer Science undergraduate</span> deeply passionate about <span
+                    class="text-teal-400">Artificial Intelligence</span> and <span class="text-teal-400">Machine
+                    Learning</span>. I’m currently working on thesis research with my professors focused on applied ML
+                and deep learning systems.
+            </p>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2 class="text-3xl font-bold text-indigo-400 mb-6">Skills & Tools</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-slate-300">
+                <div>
+                    <h3 class="text-teal-400 font-semibold mb-2">Languages</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>C/C++</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-teal-400 font-semibold mb-2">Frameworks</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Scikit-learn</li>
+                        <li>TensorFlow / PyTorch</li>
+                        <li>XGBoost / LightGBM</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-teal-400 font-semibold mb-2">Tools</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Jupyter / Colab</li>
+                        <li>Git</li>
+                        <li>MLflow</li>
+                        <li>Tableau</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="text-3xl font-bold text-indigo-400 mb-6">Education</h2>
+            <div class="space-y-6">
+                <div class="bg-slate-800/60 p-6 rounded-xl shadow-md border border-slate-700">
+                    <h3 class="text-xl font-semibold text-teal-400">B.Sc. in Computer Science & Engineering</h3>
+                    <p class="text-sm text-slate-400">University of Global Village (UGV) — Barishal, Bangladesh</p>
+                    <p class="text-sm text-slate-400">Expected Graduation: December, 2025</p>
+                    <p class="mt-2 text-slate-200">
+                        Pursuing core studies in Computer Science & Engineering with a focus on Artificial Intelligence,
+                        Machine
+                        Learning,
+                        and Data Science. Currently engaged in academic thesis research involving deep learning systems.
+                    </p>
+                    <ul class="list-disc text-slate-300 mt-3 pl-5">
+                        <li>GPA: NaN</li>
+                        <li>Relevant Coursework: Machine Learning, Algorithms, Data Mining, Linear Algebra</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-800/60 p-6 rounded-xl shadow-md border border-slate-700">
+                    <h3 class="text-xl font-semibold text-teal-400">HSC in Science</h3>
+                    <p class="text-sm text-slate-400">Barishal Government Model School & College (BGMSC) — Barishal,
+                        Bangladesh</p>
+                    <p class="text-sm text-slate-400">Graduated in: December, 2020</p>
+                    <ul class="list-disc text-slate-300 mt-3 pl-5">
+                        <li>GPA: 5.00</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-800/60 p-6 rounded-xl shadow-md border border-slate-700">
+                    <h3 class="text-xl font-semibold text-teal-400">SSC in Science</h3>
+                    <p class="text-sm text-slate-400">Barishal Government Model School & College (BGMSC) — Barishal,
+                        Bangladesh</p>
+                    <p class="text-sm text-slate-400">Graduated in: December, 2018</p>
+                    <ul class="list-disc text-slate-300 mt-3 pl-5">
+                        <li>GPA: 4.95</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Experience -->
+        <section id="experience">
+            <h2 class="text-3xl font-bold text-indigo-400 mb-6">Experience</h2>
+            <div class="space-y-6">
+
+                <div class="bg-slate-800/60 p-6 rounded-xl shadow-md border border-slate-700">
+                    <h3 class="text-xl font-semibold text-teal-400">Research Thesis — AI & Deep Learning</h3>
+                    <p class="text-sm text-slate-400">Jan 2024 – Present</p>
+                    <p class="mt-2 text-slate-200">
+                        Collaborating with faculty on a thesis exploring deep learning applications in image and text
+                        understanding. Focused on model interpretability and performance tuning using PyTorch and
+                        Transformers.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/60 p-6 rounded-xl shadow-md border border-slate-700">
+                    <h3 class="text-xl font-semibold text-teal-400">Data Analyst Intern @ XYZ Corp</h3>
+                    <p class="text-sm text-slate-400">Jun 2023 – Aug 2023</p>
+                    <p class="mt-2 text-slate-200">Improved customer retention by 15% using predictive modeling and
+                        churn analysis in Python.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2 class="text-3xl font-bold text-indigo-400 mb-6">Projects</h2>
+            <div class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 p-6 rounded-lg border border-slate-700 shadow hover:scale-[1.02] transition">
+                        <h3 class="text-xl text-teal-300 font-semibold mb-2">Image Classifier with CNN</h3>
+                        <p class="text-slate-300">Built a CNN model using PyTorch for image classification on CIFAR-10
+                            dataset.</p>
+                        <div class="mt-3 flex space-x-4">
+                            <a href="#" class="text-indigo-400 hover:underline">GitHub</a>
+                            <a href="#" class="text-teal-400 hover:underline">Colab</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 p-6 rounded-lg border border-slate-700 shadow hover:scale-[1.02] transition">
+                        <h3 class="text-xl text-teal-300 font-semibold mb-2">Machine Translation from Bangla to English
+                        </h3>
+                        <p class="text-slate-300">Built a Deep Learning Model using transformers for language
+                            translation.</p>
+                        <div class="mt-3 flex space-x-4">
+                            <a href="#" class="text-indigo-400 hover:underline">GitHub</a>
+                            <a href="#" class="text-teal-400 hover:underline">Colab</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications">
+            <h2 class="text-3xl font-bold text-indigo-400 mb-6">Publications & Research</h2>
+            <ul class="text-slate-300 list-disc pl-5 space-y-2">
+                <li>
+                    <span class="text-teal-300 font-medium">Thesis (In Progress):</span> <br />
+                    <em>“Interpretable Deep Learning Models for Image Understanding”</em><br />
+                    Supervised by Prof. [Your Professor’s Name], Department of CS
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/yourpaperid" target="_blank" class="text-teal-300 hover:underline">
+                        Co-author: Preprint on Multi-modal Fusion for NLP (arXiv:XXXX.XXXX)
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Blog -->
+        <section id="blog">
+            <h2 class="text-3xl font-bold text-indigo-400 mb-6">Blog</h2>
+            <ul class="space-y-3 text-slate-300">
+                <li><a href="https://medium.com/@yourname" target="_blank" class="text-teal-300 hover:underline">🔍
+                        Understanding Transformers: A Visual Guide</a></li>
+                <li><a href="#" target="_blank" class="text-teal-300 hover:underline">📊 Time Series Forecasting with
+                        Prophet</a></li>
+            </ul>
+        </section>
+
+        <!-- Learning -->
+        <section id="learning">
+            <h2 class="text-3xl font-bold text-indigo-400 mb-6">What I'm Learning Now</h2>
+            <ul class="list-disc text-slate-300 pl-5 space-y-2">
+                <li>Fine-tuning LLMs (Transformers, LoRA, PEFT)</li>
+                <li>Experiment tracking with MLflow & W&B</li>
+                <li>Statistical inference for real-world ML</li>
+                <li>MLOps fundamentals & model deployment</li>
+            </ul>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2 class="text-3xl font-bold text-indigo-400 mb-6">Contact Me</h2>
+            <form action="mailto:you@example.com" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Your Name"
+                    class="w-full px-4 py-2 rounded bg-slate-800 text-white border border-slate-700" required>
+                <input type="email" name="email" placeholder="Your Email"
+                    class="w-full px-4 py-2 rounded bg-slate-800 text-white border border-slate-700" required>
+                <textarea name="message" rows="5" placeholder="Your Message"
+                    class="w-full px-4 py-2 rounded bg-slate-800 text-white border border-slate-700"
+                    required></textarea>
+                <button type="submit"
+                    class="bg-teal-500 hover:bg-teal-400 px-6 py-2 rounded text-white font-medium">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-32 bg-slate-950 text-center py-6 border-t border-slate-800">
+        <div class="flex justify-center space-x-6 text-slate-300 text-xl mb-4">
+            <a href="https://www.linkedin.com/in/fazriislam111/" target="_blank" class="hover:text-indigo-400"><i
+                    class="si si-linkedin"></i></a>
+            <a href="https://github.com/fazriislam" target="_blank" class="hover:text-indigo-400"><i
+                    class="si si-github"></i></a>
+            <a href="https://www.kaggle.com/fazriislam111" target="_blank" class="hover:text-indigo-400"><i
+                    class="si si-kaggle"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" class="hover:text-indigo-400"><i
+                    class="si si-twitter"></i></a>
+            <a href="https://reddit.com/u/yourprofile" target="_blank" class="hover:text-indigo-400"><i
+                    class="si si-reddit"></i></a>
+        </div>
+        <p class="text-slate-500 text-sm">© 2025 Fazri Islam. All rights reserved.</p>
+        <p class="text-slate-500 text-sm mt-2">
+            Undergraduate @ Department of Computer Science, UGV
+        </p>
+    </footer>
+
+</body>
+
+</html>
